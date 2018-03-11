@@ -1,0 +1,20 @@
+<%= form_with(model: @clone, local: true, url: choose_new_or_edit) do |form| %>
+  <% if @clone.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @clone.errors.count %>件のエラーがあります。</h2>
+      <ul>
+            
+      <% @clone.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="clone">
+    <%= form.text_area :content, :size => "30x4", :placeholder => "いまどうしてる？"%>
+  </div>
+  <%= form.submit "ツイート", :id=>"btn_new", :class=>"btn btn-primary" %>
+<% end %>
+
+<%= link_to "ツイート一覧にもどる", clones_path %>

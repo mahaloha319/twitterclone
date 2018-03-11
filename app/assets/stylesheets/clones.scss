@@ -1,0 +1,52 @@
+.container{
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+    min-height: 100%;
+    margin-bottom: 100px;
+}
+
+.contents{
+    padding-bottom: 100px;
+    margin-right: auto;
+  　margin-left: auto;
+}
+
+.contentList{
+    width: 50%;
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: 2px solid lightblue;
+    background: #fff;
+    font-size: 18px;
+}
+    
+.btn{
+    color: #000080;
+    margin-top:-8px;
+    margin-bottom:15px;
+}
+
+.btn_back{
+    color: #FFF;
+    margin-top:10px;
+}
+
+#btn_new{
+    margin-top:10px;
+}
+
+ul.btn li{
+    display: inline;
+}
+
+h3{
+    font-weight: bold;
+}
+
+p{
+    font-size: 2rem;
+}
+

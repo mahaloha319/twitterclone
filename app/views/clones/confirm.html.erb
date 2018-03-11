@@ -1,0 +1,14 @@
+<h3>以下の内容でツイートする。</h3>
+
+<%= form_with(model: @clone, url: clones_path, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+  
+  <P>内容: <%= @clone.content %></P>
+  <%= form.submit "登録する", :class=>"btn btn-primary" %>
+
+<% end %>  
+
+<%= form_with(model: @clone, url: new_clone_path, local: true, method: 'get') do |form| %>
+   <%= form.hidden_field :content %>
+  <%= form.submit "もどる", name: 'back', :class=>"btn btn-primary" %>
+<% end %>

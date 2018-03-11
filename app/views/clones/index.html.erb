@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="content">
+  <h3>ツイート一覧</h3>
+
+  <p><%= notice %></p>
+
+  <% @clones.each do |clone| %>
+    <ul>
+      <li class="contentList"><%= clone.content %></li>
+      <li>ツイート日時: <%= simple_time(clone.created_at) %></li>
+    </ul>
+    <ul class="btn">
+      <li><%= link_to '詳細確認', clone_path(clone.id), class: 'btn btn-default'%></li>
+      <li><%= link_to '編集', edit_clone_path(clone.id), class: 'btn btn-info' %></li>
+      <li><%= link_to '削除', clone_path(clone.id), method: :delete ,data: {confirm: '本当に削除していいですか？'}, class: 'btn btn-danger' %></li>
+    </ul>
+  <% end %>
+  </div>
+</div>
